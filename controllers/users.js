@@ -9,7 +9,6 @@ const User = require("../models/user");
 const { HttpError, registerSchema, loginSchema } = require("../helpers");
 
 const userRegister = async (req, res, next) => {
-  console.log("back reg");
   try {
     const { email, password } = req.body;
     // проверяем бади по схеме joi

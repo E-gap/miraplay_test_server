@@ -1,6 +1,6 @@
 const { userRegister, userLogin, userCurrent, userLogout } = require("./users");
 
-const { getAllGames, getOneGame } = require("./games");
+const { getAllGames } = require("./games");
 
 module.exports = {
   userRegister,
@@ -8,5 +8,4 @@ module.exports = {
   userCurrent,
   userLogout,
   getAllGames,
-  getOneGame,
 };

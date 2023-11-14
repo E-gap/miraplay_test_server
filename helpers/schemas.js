@@ -47,9 +47,6 @@ const gameSchema = new Schema({
   name: {
     type: String,
   },
-  description: {
-    type: String,
-  },
 });
 
 module.exports = {
