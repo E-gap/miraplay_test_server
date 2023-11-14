@@ -3,13 +3,13 @@ const Game = require("../models/game");
 const limit = 9;
 
 const getAllGames = async (req, res, next) => {
-  console.log("start games");
-  const { genre, page } = req.query;
-  console.log(genre, page);
+  const { genre, page, sortBy } = req.query;
+
+  const sortRule = sortBy === "first old" ? "date" : "-date";
 
   try {
     const filter = genre === "ALL" ? {} : { genre };
-    const resultAll = await Game.find(filter);
+    const resultAll = await Game.find(filter).sort(sortRule);
 
     const result = resultAll.slice(0, limit * page);
 
